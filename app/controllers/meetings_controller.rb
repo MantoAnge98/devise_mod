@@ -26,7 +26,7 @@ class MeetingsController < ApplicationController
     respond_to do |format|
       if @meeting.save
         #Add mailer when i create new meeting
-        MeetingsMailer.meeting_mail(@meeting).deliver 
+        #MeetingsMailer.meeting_mail(@meeting).deliver 
         format.html { redirect_to @meeting, notice: "Meeting was successfully created." }
         format.json { render :show, status: :created, location: @meeting }
       else
